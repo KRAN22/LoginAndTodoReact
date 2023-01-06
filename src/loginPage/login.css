@@ -2,7 +2,7 @@
     margin: auto;
     margin-top: 20px;
     width: 80%;
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
     border-color: royalblue;
     border: 3px;
     border-radius: 50px;
@@ -10,40 +10,51 @@
 }
 
 .loginHeader{
-    padding-top: 10px;
-    color: blue;
+    padding-top: 120px;
+    padding-bottom: 20px;
+}
+.loginHeader h4{
+    margin: 0;
+    color: rgb(86, 94, 86);
+}
+.loginHeader h1{
+    margin: 0;
+    color: rgb(3, 64, 3);
 }
 
 .loginMain{
-    padding: 40px;
     margin:auto;
-    width: 80%;
-    align-items: center;
-    background-color: bisque;
-    font-size: 20px;
-    color: blueviolet;
-    border-radius: 30px;
+    width: 400px;
+}
+.loginMain h5{
+    margin: 0; 
+    padding-bottom: 5px;
 }
 .loginMain div{
-    padding: 10px;
-    width: 80%;
-    margin: auto;
-    
+    padding-bottom: 20px;
 }
-.loginMain div input{
-    width: 50%;
-    padding: 5px;
+.loginMain input{
+    width: 90%;
     margin: auto;
-}
-.loginMain div label{
-    width: 30%;
-    margin: auto;
-}
-.loginMain div button{
-    font-size: 20px;
-    color: black;
     border-radius: 10px;
-    background-color: lightcoral;
-    margin: auto;
     padding: 10px;
+    background-color: white;
+    border-color: whitesmoke;
+    background-origin: padding-box;
+}
+.Btn{
+    width: 350px;
+    margin: auto;
+    margin-top: 20px;
+    color: black;
+    align-items: center;
+    border-radius: 10px;
+}
+.Btn button{
+    margin: auto;
+    padding:10px 50% 10px 50%;
+    font-size: 17px;
+    background-color: #556b2f;
+    border-color: #556b2f;
+    box-shadow: none;
 }
