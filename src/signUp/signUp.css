@@ -1,9 +1,9 @@
 .Main{
-    padding-top:80px;
+    padding-top:60px;
     background-color: #63738a;
-    padding-bottom: 600px;
+    padding-bottom: 400px;
 }
-.login{
+.signUp{
     width: 30%;
     margin: auto;
     background-color: white;
@@ -12,23 +12,22 @@
     padding-top: 10px;
     text-align: center;
     color: #636363;
-    /* font-size: 40px; */
 }
-.header h4{
+.header h5{
     margin:0;
     color: #999;
     text-align: center;
 }
-.loginMain{
+.signUpMain{
     width: 80%;
     margin: auto;
     padding-top: 40px;
 }
-.loginMain h5{
+.signUpMain h5{
     margin: 0;
     padding-bottom: 10px;
 }
-.loginMain input{
+.signUpMain input{
     width: 100%;
     padding: 10px;
     margin-bottom: 30px;
@@ -36,13 +35,12 @@
 }
 
 .Btn{
-    width: 100%;
-    margin-bottom: 40px;
+  width: 100%;
+  margin-bottom: 30px;
 }
-  
+
 .Btn button{
     width: 100%;
-    margin-top: 10px;
     padding:10px 0 10px 0;
     text-align: center;
     font-size: 17px;
@@ -53,7 +51,6 @@
     margin-bottom: 20px;
     border-radius: 5px;
 }
-
 .footer{
     width: 30%;
     margin: auto;
