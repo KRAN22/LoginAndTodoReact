@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./signUp.css";
 import axios from "axios";
 
@@ -24,13 +24,16 @@ export const SignUp = () => {
     setPasswordError();
     setPassword(e.target.value);
   };
+
+  const navigate = useNavigate();
+
   const SubmitHandler = async () => {
     if ((username.length > 0) & (email.length > 0) & (password.length > 0)) {
       const baseURL = "http://127.0.0.1:8000/api/user/signIn";
       const body = { username, email, password };
       try {
         const response = await axios.post(baseURL, body);
-        console.log(response);
+        navigate("/created");
       } catch (e) {
         setError(e.response.data.detail);
       }

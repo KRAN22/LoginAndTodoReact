@@ -2,7 +2,8 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LoginForm } from "../loginPage/login";
 import { ProtectedRoute } from "../loginPage/protectedRouter";
-import { Todo } from "../loginPage/Todo/todo";
+import { Todo } from "../loginPage/Todo/Todo";
+import { CreatedPage } from "../signUp/createdPage";
 import { SignUp } from "../signUp/signUp";
 
 export const Routers = () => {
@@ -15,6 +16,7 @@ export const Routers = () => {
           <Route path="/todo" element={<Todo />} />
         </Route>
         <Route path="/signUp" element={<SignUp />} />;
+        <Route path="/signUp/created" element={<CreatedPage />} />;
       </Routes>
     </BrowserRouter>
   );

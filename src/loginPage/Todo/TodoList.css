@@ -1,0 +1,74 @@
+.CreateMain {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+.Navbar {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #63738a;
+  color: black;
+}
+.mainbar {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  text-align: center;
+  color: gray;
+}
+.hr {
+  margin: 0;
+  border: 2px solid black;
+}
+.title {
+  width: 20%;
+}
+.desc {
+  width: 30%;
+}
+.status_1 {
+  width: 10%;
+  border: 2px solid lightgrey;
+  box-sizing: border-box;
+  margin-top: 10px;
+  text-align: center;
+}
+.status_1 h4 {
+  padding-top: 10px;
+  margin: 0;
+}
+.edit {
+  width: 10%;
+}
+.remove {
+  width: 10%;
+}
+
+.ButEdit {
+  margin: 10px;
+}
+
+.ButEdit button {
+  padding: 6px;
+  color: aqua;
+  border-color: aqua;
+  background-color: white;
+  background-color: none;
+  font-size: 20px;
+}
+
+.ButRemove {
+  margin: 10px;
+}
+
+.ButRemove button {
+  padding: 6px;
+  color: black;
+  font-size: 20px;
+}
