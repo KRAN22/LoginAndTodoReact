@@ -4,6 +4,7 @@ import jwt_decode from "jwt-decode";
 import "./todo.css";
 import axios from "axios";
 import TodoList from "./TodoList";
+import { BiLogOut } from "react-icons/bi";
 
 export const Todo = () => {
   const [title, setTitle] = useState("");
@@ -86,10 +87,12 @@ export const Todo = () => {
             <div className="Btn">
               <button onClick={SubmitHandler}>Submit</button>
             </div>
-            <div>
-              <button onClick={onClickHandler}>LogOut</button>
-            </div>
           </div>
+        </div>
+        <div className="DelBtn">
+          <button onClick={onClickHandler}>
+            <BiLogOut />
+          </button>
         </div>
       </div>
       <div className="todoUpdate">

@@ -2,11 +2,14 @@ import axios from "axios";
 import React from "react";
 import { useEffect, useState } from "react";
 import "./TodoList.css";
+import { UpdateTodo } from "./UpdateTodo";
 
 import { FiTrash2, FiEdit } from "react-icons/fi";
 
 const TodoList = () => {
   const [list, setList] = useState([]);
+  const [edit, setEdit] = useState(false);
+  const [id, setId] = useState(0);
 
   useEffect(() => {
     getTodoList();
@@ -30,7 +33,6 @@ const TodoList = () => {
   };
 
   const OnClickDelete = async (id) => {
-    console.log(id);
     const token = localStorage.getItem("AccessToken");
     const baseURL = `http://127.0.0.1:8000/api/todo/deleteTodo/${id}`;
     const header = {
@@ -49,7 +51,11 @@ const TodoList = () => {
     }
   };
 
-  const OnClickEdit = () => {};
+  const OnClickEdit = (id) => {
+    setId(id);
+    setEdit(true);
+  };
+
   return (
     <div className="CreateMain">
       <div className="Navbar">
@@ -70,6 +76,7 @@ const TodoList = () => {
         </div>
       </div>
       <hr className="hr"></hr>
+      {edit ? <UpdateTodo name={id} /> : ""}
       {list.map((item) => {
         return (
           <div key={item.id} className="mainbar">

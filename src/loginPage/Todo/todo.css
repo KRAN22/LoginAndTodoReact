@@ -67,3 +67,15 @@
   border: 2px solid red;
   display: flex;
 }
+
+.DelBtn {
+  margin-top: 15px;
+  margin-right: 15px;
+}
+.DelBtn button {
+  padding: 10px;
+  font-size: 35px;
+  background-color: transparent;
+  color: #28a745;
+  border: transparent;
+}
