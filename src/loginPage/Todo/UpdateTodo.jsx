@@ -33,6 +33,7 @@ export const UpdateTodo = (props) => {
   };
   return (
     <div className="updateTodo">
+      <h2>Update Our Todo</h2>
       <h4>Title</h4>
       <input type={"text"} onChange={OnChangeTitle}></input>
       <h4>Description</h4>

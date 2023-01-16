@@ -76,32 +76,37 @@ const TodoList = () => {
         </div>
       </div>
       <hr className="hr"></hr>
-      {edit ? <UpdateTodo name={id} /> : ""}
-      {list.map((item) => {
-        return (
-          <div key={item.id} className="mainbar">
-            <div className="title">
-              <h4>{item.title}</h4>
-            </div>
-            <div className="desc">
-              <h4>{item.description}</h4>
-            </div>
-            <div className="status_1">
-              <h4>{item.status.value}</h4>
-            </div>
-            <div className="ButEdit">
-              <button onClick={() => OnClickEdit(item.id)}>
-                <FiEdit />
-              </button>
-            </div>
-            <div className="ButRemove">
-              <button onClick={() => OnClickDelete(item.id)}>
-                <FiTrash2 />
-              </button>
-            </div>
-          </div>
-        );
-      })}
+      {edit ? (
+        <UpdateTodo name={id} />
+      ) : (
+        <div>
+          {list.map((item) => {
+            return (
+              <div key={item.id} className="mainbar">
+                <div className="title">
+                  <h4>{item.title}</h4>
+                </div>
+                <div className="desc">
+                  <h4>{item.description}</h4>
+                </div>
+                <div className="status_1">
+                  <h4>{item.status.value}</h4>
+                </div>
+                <div className="ButEdit">
+                  <button onClick={() => OnClickEdit(item.id)}>
+                    <FiEdit />
+                  </button>
+                </div>
+                <div className="ButRemove">
+                  <button onClick={() => OnClickDelete(item.id)}>
+                    <FiTrash2 />
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };

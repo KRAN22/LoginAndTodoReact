@@ -16,7 +16,7 @@ export const Routers = () => {
           <Route path="/todo" element={<Todo />} />
         </Route>
         <Route path="/signUp" element={<SignUp />} />;
-        <Route path="/signUp/created" element={<CreatedPage />} />;
+        <Route path="/created" element={<CreatedPage />} />;
       </Routes>
     </BrowserRouter>
   );
