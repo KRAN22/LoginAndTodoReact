@@ -78,7 +78,7 @@
 }
 
 .updateTodo {
-  padding-top: 130px;
+  padding-top: 90px;
   width: 40%;
   margin: auto;
   box-sizing: border-box;
@@ -109,4 +109,10 @@
   border-color: #28a745;
   margin-bottom: 20px;
   border-radius: 5px;
+}
+.status_options {
+  width: 100%;
+  padding: 10px 0 10px 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }

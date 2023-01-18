@@ -6,6 +6,7 @@ export const UpdateTodo = (props) => {
   const id = props.name;
   const [title, setTitle] = useState();
   const [description, setDescription] = useState();
+  const [status, setStatus] = useState();
 
   const OnChangeTitle = (e) => {
     setTitle(e.target.value);
@@ -13,11 +14,14 @@ export const UpdateTodo = (props) => {
   const OnChangeDesc = (e) => {
     setDescription(e.target.value);
   };
+  const OnChangeStatus = (e) => {
+    setStatus(e.target.value);
+  };
 
   const OnClickUpdate = async () => {
     const token = localStorage.getItem("AccessToken");
     const baseURL = `http://127.0.0.1:8000/api/todo/updateTodo/${id}`;
-    const body = { title, description };
+    const body = { title, description, status };
     const header = {
       headers: {
         "Content-Type": "application/json",
@@ -38,6 +42,12 @@ export const UpdateTodo = (props) => {
       <input type={"text"} onChange={OnChangeTitle}></input>
       <h4>Description</h4>
       <input type={"text"} onChange={OnChangeDesc}></input>
+      <h4>Status</h4>
+      <select className="status_options" onChange={OnChangeStatus}>
+        <option value={"CREATED"}>CREATED</option>
+        <option value={"IN-PROGRESS"}>IN-PROGRESS</option>
+        <option value={"COMPLETED"}>COMPLETED</option>
+      </select>
       <div>
         <button onClick={OnClickUpdate}>Upgrade</button>
       </div>
