@@ -3,9 +3,12 @@ import axios from "axios";
 import { useState } from "react";
 
 export const UpdateTodo = (props) => {
-  const id = props.name;
-  const [title, setTitle] = useState();
-  const [description, setDescription] = useState();
+  const id = props.name.id;
+  const Title = props.name.title;
+  const Description = props.name.des;
+
+  const [title, setTitle] = useState(Title);
+  const [description, setDescription] = useState(Description);
   const [status, setStatus] = useState();
 
   const OnChangeTitle = (e) => {
@@ -39,9 +42,9 @@ export const UpdateTodo = (props) => {
     <div className="updateTodo">
       <h2>Update Our Todo</h2>
       <h4>Title</h4>
-      <input type={"text"} onChange={OnChangeTitle}></input>
+      <input type={"text"} value={title} onChange={OnChangeTitle}></input>
       <h4>Description</h4>
-      <input type={"text"} onChange={OnChangeDesc}></input>
+      <input type={"text"} value={description} onChange={OnChangeDesc}></input>
       <h4>Status</h4>
       <select className="status_options" onChange={OnChangeStatus}>
         <option value={"CREATED"}>CREATED</option>

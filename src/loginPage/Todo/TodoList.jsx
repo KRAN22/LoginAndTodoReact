@@ -7,6 +7,9 @@ import { UpdateTodo } from "./UpdateTodo";
 import { FiTrash2, FiEdit } from "react-icons/fi";
 
 const TodoList = () => {
+  const [title, setTitle] = useState("");
+  const [des, setDes] = useState("");
+
   const [list, setList] = useState([]);
   const [edit, setEdit] = useState(false);
   const [id, setId] = useState(0);
@@ -51,8 +54,10 @@ const TodoList = () => {
     }
   };
 
-  const OnClickEdit = (id) => {
+  const OnClickEdit = (id, title, description, status) => {
     setId(id);
+    setTitle(title);
+    setDes(description);
     setEdit(true);
   };
 
@@ -77,7 +82,7 @@ const TodoList = () => {
       </div>
       <hr className="hr"></hr>
       {edit ? (
-        <UpdateTodo name={id} />
+        <UpdateTodo name={{ id, title, des }} />
       ) : (
         <div>
           {list.map((item) => {
@@ -93,7 +98,11 @@ const TodoList = () => {
                   <h4>{item.status.value}</h4>
                 </div>
                 <div className="ButEdit">
-                  <button onClick={() => OnClickEdit(item.id)}>
+                  <button
+                    onClick={() =>
+                      OnClickEdit(item.id, item.title, item.description)
+                    }
+                  >
                     <FiEdit />
                   </button>
                 </div>

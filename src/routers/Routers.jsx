@@ -7,7 +7,6 @@ import { CreatedPage } from "../signUp/createdPage";
 import { SignUp } from "../signUp/signUp";
 
 export const Routers = () => {
-  const token = window.localStorage.getItem("AccessToken");
   return (
     <BrowserRouter>
       <Routes>
